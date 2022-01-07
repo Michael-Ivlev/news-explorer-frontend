@@ -1,5 +1,5 @@
 @import url(./vendor/normalize.css);
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap'); */
-@import url('./utils/fonts/inter/inter.css');
-@import url('./utils/fonts/roboto/stylesheet.css');
-@import url('./utils/fonts/roboto_slab/roboto_slab.css');
+@import url('./vendor/fonts/inter/inter.css');
+@import url('./vendor/fonts/roboto/stylesheet.css');
+@import url('./vendor/fonts/roboto_slab/roboto_slab.css');
