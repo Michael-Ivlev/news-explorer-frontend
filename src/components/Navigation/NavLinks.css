@@ -1,0 +1,92 @@
+.navlink__link {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navlink__link-active {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 30px;
+  text-decoration-thickness: 3px;
+}
+
+.navlink__link_mobile {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navlink__button {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 19px;
+  /* main/white */
+  background: none;
+  color: #ffffff;
+}
+
+.navlink__button_login {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 60px;
+  background: none;
+  color: #ffffff;
+  justify-content: center;
+}
+
+.navlink__button_login_icon {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .navlink__link,
+  .navlink__link-active,
+  .navlink__button,
+  .navlink__button_login {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navlink__button_login {
+    font-size: 16px;
+  }
+}
