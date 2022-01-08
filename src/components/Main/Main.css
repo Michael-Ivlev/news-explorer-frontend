@@ -13,7 +13,7 @@
 }
 
 .search__title {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -24,7 +24,7 @@
 }
 
 .search__sub-title {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -62,7 +62,7 @@
     margin-bottom: 48px;
   }
   .about-section{
-    padding: 40px 0px;
+    padding: 40px;
   }
 }
 

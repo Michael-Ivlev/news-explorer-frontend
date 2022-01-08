@@ -72,6 +72,8 @@ function App() {
                     isOpen={registretionSuccsess}
                     onCloseClick={closeAllPopUps}
                     title="Registration successfully completed!"
+                    onChangeClick={handleLoginOpen}
+                    link_rederect_text="Sign In"
                   />
                 }
                 <PopUpRegister

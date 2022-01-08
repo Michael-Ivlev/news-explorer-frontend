@@ -39,7 +39,7 @@ export function NewsCardList(props) {
   if (props.searchResultStatus === "Not-Found")
     return (
       <div className="newscardlist__notfound">
-        <img src={avatarImg}></img>
+        <img src={avatarImg} alt="Nothing found sad smile"></img>
         <h3 className="newscardlist__notfound_title">Nothing found</h3>
         <p className="newscardlist__notfound_text">
           Sorry, but nothing matched your search terms.

@@ -18,10 +18,9 @@ export function PopUpRegister(props) {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const [returnSuccess, setReturnSuccess] = useState(false);
   const onSubmit = (data) => {
     props.handleRegisterSuccess();
-    setIsOpen(false)
+    setIsOpen(false);
   };
 
   return (
@@ -29,6 +28,9 @@ export function PopUpRegister(props) {
       isOpen={isOpen}
       title="Sign up"
       onCloseClick={props.onCloseClick}
+      onChangeClick={props.onChangeClick}
+      link_text={"Or "}
+      link_rederect_text="Sign In"
     >
       <form onSubmit={handleSubmit(onSubmit)}>
         <p className="popupregistter__label">Email</p>
@@ -85,15 +87,6 @@ export function PopUpRegister(props) {
         >
           Sign In
         </button>
-        <p className="popuplogin__link">
-          Or{" "}
-          <a
-            className="popuplogin__link_rederect"
-            onClick={props.onChangeClick}
-          >
-            Sign In
-          </a>
-        </p>
       </form>
     </PopupWithForm>
   );

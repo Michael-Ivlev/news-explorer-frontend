@@ -11,7 +11,7 @@
   backdrop-filter: blur(8px);
   padding-left: 24px;
   border-radius: 100px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -19,7 +19,7 @@
 }
 
 .searchform__input::placeholder {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -36,7 +36,7 @@
   position: absolute;
   right: 0;
   border: none;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

@@ -27,6 +27,9 @@ export function PopUpLogin(props) {
       isOpen={props.isOpen}
       title="Sign In"
       onCloseClick={props.onCloseClick}
+      onChangeClick={props.onChangeClick}
+      link_text={"Or "}
+      link_rederect_text="Sign Up"
     >
       <form onSubmit={handleSuccessLogin}>
         <p className="popuplogin__label">Email</p>
@@ -63,15 +66,6 @@ export function PopUpLogin(props) {
         >
           Sign In
         </button>
-        <p className="popuplogin__link">
-          Or{" "}
-          <a
-            className="popuplogin__link_rederect"
-            onClick={props.onChangeClick}
-          >
-            Sign Up
-          </a>
-        </p>
       </form>
     </PopupWithForm>
   );

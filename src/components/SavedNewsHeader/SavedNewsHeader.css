@@ -9,7 +9,7 @@
 .saved-news-header__title {
   margin: 0;
   margin-top: 120px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -20,7 +20,7 @@
 .saved-news-header__amount {
   margin: 0;
   margin-top: 28px;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -30,7 +30,7 @@
 }
 
 .saved-news-header__keywords {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: lighter;
   font-size: 18px;

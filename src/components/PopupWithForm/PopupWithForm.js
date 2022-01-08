@@ -35,6 +35,15 @@ export function PopupWithForm(props) {
         </button>
         <h2 className={"popupwithform__form-heading"}>{`${props.title}`}</h2>
         {props.children}
+        <p className="popupwithform__link">
+          {props.link_text}
+          <a
+            className="popupwithform__link_rederect"
+            onClick={props.onChangeClick}
+          >
+            {props.link_rederect_text}
+          </a>
+        </p>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const avatarImg = require("../../images/avatar.png");
 export function About(props) {
   return (
     <div className="about">
-      <img className="about__profileimage" src={avatarImg}></img>
+      <img className="about__profileimage" src={avatarImg} alt="User profile image"></img>
       <div className="about_text-container" alt="Image of the page avatar">
         <h2 className="about_text-container_title">About the author</h2>
         <p className="about_text-container_text">

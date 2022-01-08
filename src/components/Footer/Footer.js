@@ -5,7 +5,7 @@ import { FaGithub, FaFacebookSquare } from "react-icons/fa";
 
 export function Footer(params) {
   return (
-    <div className="footer">
+    <footer className="footer">
       <p className="footer__credits">© 2021 Supersite, Powered by News API</p>
       <div className="footer__nav">
         <div className="footer__nav_links">
@@ -17,14 +17,14 @@ export function Footer(params) {
           </Link>
         </div>
         <div className="footer__nav_social">
-          <Link to="/">
+          <a href="https://github.com" target="_blank">
             <FaGithub size={20} className="footer__nav_social_icon" />
-          </Link>
-          <Link to="/">
+          </a>
+          <a href="https://facebook.com" target="_blank">
             <FaFacebookSquare size={20} className="footer__nav_social_icon" />
-          </Link>
+          </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

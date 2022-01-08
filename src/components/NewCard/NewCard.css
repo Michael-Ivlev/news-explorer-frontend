@@ -27,7 +27,7 @@
 }
 
 .newcard__info_title {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
@@ -50,7 +50,7 @@
 }
 
 .newcard__info_location {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -154,7 +154,7 @@
 }
 
 .newcard__button-info_text {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -165,7 +165,7 @@
 }
 
 .newcard__keyword {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -184,16 +184,22 @@
 }
 
 .newcard__img{
-  max-height: 272px;
+  max-height: 266px;
 }
 
 @media screen and (max-width: 1234px) {
+  .newcard__img{
+    max-height: 200px;
+  }
   .newcard {
     width: 300px;
   }
 }
 
 @media screen and (max-width: 930px) {
+  .newcard__img{
+    max-height: 145px;
+  }
   .newcard {
     width: 224px;
     height: 420px;
@@ -229,5 +235,8 @@
   .newcard {
     width: 288px;
     height: 470px;
+  }
+  .newcard__img{
+    max-height: 288px;
   }
 }

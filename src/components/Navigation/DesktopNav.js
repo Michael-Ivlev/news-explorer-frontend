@@ -7,10 +7,10 @@ export function DesktopNav(props) {
   return (
     <>
       <div className={props.darMode? "desktopnav invert-colors" : "desktopnav"}>
-        <h1 className="desktopnav__logo">NewsExplorer</h1>
-        <div className="desktopnav__links">
+        <h2 className="desktopnav__logo">NewsExplorer</h2>
+        <nav className="desktopnav__links">
           <NavLinks isLogedIn={props.isLogedIn} onCloseClick={props.onCloseClick}/>
-        </div>
+        </nav>
       </div>
     </>
   );

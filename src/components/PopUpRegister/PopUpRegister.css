@@ -1,6 +1,6 @@
 .popupregistter__label {
   display: block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -29,7 +29,7 @@
 }
 
 .popupwithform__button {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -50,7 +50,7 @@
 
 .popupregistter__input-error {
     margin: 0;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -59,7 +59,7 @@
 }
 
 .popupwithform__link {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

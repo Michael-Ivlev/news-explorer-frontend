@@ -26,7 +26,7 @@ export function NewCard(props) {
   ) : null;
 
   return (
-    <div className="newcard">
+    <article className="newcard">
       <button
         className={buttonClassName}
         type="button"
@@ -50,6 +50,6 @@ export function NewCard(props) {
         </p>
         <p className="newcard__info_location">{props.card.source}</p>
       </div>
-    </div>
+    </article>
   );
 }

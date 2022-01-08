@@ -28,13 +28,13 @@ export function MobileNav(props) {
     <>
       <div className="mobilenav__visabiliti">
         <div className="mobilenav">
-          <h1
+          <h2
             className={
               props.darMode ? logoClassColordependency : "mobilenav__logo"
             }
           >
             NewsExplorer
-          </h1>
+          </h2>
           <button
             className={
               props.darMode
@@ -49,9 +49,9 @@ export function MobileNav(props) {
         {dropDownOpen ? (
           <div className="mobilenav__drop-down">
             <div className="mobilenav__drop-down_container">
-              <div className="mobilenav__drop-down_container_elements">
+              <nav className="mobilenav__drop-down_container_elements">
                 <NavLinks mobile={true} isLogedIn={props.isLogedIn} onCloseClick={props.onCloseClick}/>
-              </div>
+              </nav>
             </div>
           </div>
         ) : null}
