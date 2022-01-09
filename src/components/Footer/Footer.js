@@ -12,9 +12,13 @@ export function Footer(params) {
           <Link to="/" className="footer__nav_links-link">
             Home
           </Link>
-          <Link to="/" className="footer__nav_links-link">
+          <a
+            href="https://practicum.yandex.com"
+            target="_blank"
+            className="footer__nav_links-link"
+          >
             Practicum by Yandex
-          </Link>
+          </a>
         </div>
         <div className="footer__nav_social">
           <a href="https://github.com" target="_blank">
