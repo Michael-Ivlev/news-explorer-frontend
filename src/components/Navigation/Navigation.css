@@ -1,0 +1,84 @@
+
+
+.navigation__desktop {
+  z-index: 1;
+}
+
+.hamburger__button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.navigation {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 104px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+
+.header__logo {
+  font-family: Roboto Slab, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  display: flex;
+  align-items: center;
+
+  /* main/white */
+
+  color: #ffffff;
+}
+
+/* .hamburger__menu{
+  align-items: center;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    transition: .3s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+} */
+
+/* .hamburger__menu {
+  background: #1a1b22;
+  width: 100%;
+  position: absolute;
+  height: 400px;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.hamburger__line{
+  height: 1px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+} */
+
+@media screen and (max-width: 580px) {
+  .navigation__desktop {
+    display: none;
+  }
+  .hamburger__button {
+    display: inline-block;
+  }
+}

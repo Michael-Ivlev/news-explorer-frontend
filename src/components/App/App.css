@@ -1,0 +1,9 @@
+.page {
+  min-height: 100vh;
+}
+.page__container{
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  border: none;
+}

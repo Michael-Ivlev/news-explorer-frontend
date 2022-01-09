@@ -1,0 +1,242 @@
+.newcard {
+  position: relative;
+  width: 400px;
+  height: 576px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.newcard__info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 20px;
+}
+
+.newcard__info_date {
+  font-family: Source Sans Pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  margin: 0;
+}
+
+.newcard__info_title {
+  font-family: Roboto Slab, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0;
+
+  color: #1a1b22;
+}
+
+.newcard__info_text {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  color: #1a1b22;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.newcard__info_location {
+  font-family: Roboto Slab, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+}
+
+.newcard_savebutton_logedin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  background-image: url("../../images/icon/Save.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.newcard_savebutton_saved {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  background-image: url("../../images/icon/Saved_Saved.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.newcard_savebutton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  background-image: url("../../images/icon/Save.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.newcard_savebutton:hover {
+  background-image: url("../../images/icon/Save-Hover.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.newcard_savebutton:hover + .newcard__button-info {
+  display: inline-block;
+}
+
+.newcard_deletebutton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  background-image: url("../../images/icon/Trash.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.newcard_deletebutton:hover {
+  background-image: url("../../images/icon/Trash_Active.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.newcard_deletebutton:hover + .newcard__button-info {
+  display: inline-block;
+}
+
+.newcard__button-info {
+  position: absolute;
+  display: none;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 24px;
+  right: 70px;
+  background: #ffffff;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+}
+
+.newcard__button-info_text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  max-height: 110px;
+  margin: 13px 25px;
+}
+
+.newcard__keyword {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 24px;
+  left: 24px;
+  background: #ffffff;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  padding: 8px 22px;
+}
+
+.newcard__img{
+  max-height: 266px;
+}
+
+@media screen and (max-width: 1234px) {
+  .newcard__img{
+    max-height: 200px;
+  }
+  .newcard {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .newcard__img{
+    max-height: 145px;
+  }
+  .newcard {
+    width: 224px;
+    height: 420px;
+  }
+  .newcard__info {
+    gap: 10px;
+    margin: 16px;
+  }
+  .newcard__info_title {
+    font-size: 22px;
+  }
+  .newcard__info_text {
+    max-height: 63px;
+  }
+
+  .newcard_savebutton_logedin,
+  .newcard_deletebutton,
+  .newcard_savebutton,
+  .newcard_savebutton_saved {
+    top: 8px;
+    right: 8px;
+  }
+  .newcard_deletebutton:hover + .newcard__button-info {
+    display: none;
+  }
+  .newcard__keyword{
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .newcard {
+    width: 288px;
+    height: 470px;
+  }
+  .newcard__img{
+    max-height: 288px;
+  }
+}
