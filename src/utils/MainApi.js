@@ -84,17 +84,6 @@ class MainApi extends React.Component {
     }).then((res) => this._getResponseData(res));
   }
 
-
-  //   signin = (password, email) => {
-  //     return fetch(`${BASE_URL}/signin`, {
-  //       method: "POST",
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ password, email }),
-  //     }).then((res) => _getResponseData(res));
-  //   };
 }
 
 const mainApi = new MainApi({

@@ -25,7 +25,6 @@ export function MobileNav(props) {
     : "mobilenav__hamburger invert-colors";
 
   return (
-    <>
       <div className="mobilenav__visabiliti">
         <div className="mobilenav">
           <h2
@@ -56,6 +55,5 @@ export function MobileNav(props) {
           </div>
         ) : null}
       </div>
-    </>
   );
 }

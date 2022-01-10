@@ -174,21 +174,15 @@ function App() {
     });
   }
 
-  function getUserArticlesList() {
-    mainApi.getUserArticlesList(token).then((res) => {
-      return res;
-    });
-  }
-
   return (
     <div className="page">
       <div className="page__container">
-        <Routes>
-          <Route
-            path="/saved-news"
-            element={
-              <ProtectedRoute isLogedIn={isLogedIn}>
-                <CurrentUserContext.Provider value={currentUser}>
+        <CurrentUserContext.Provider value={currentUser}>
+          <Routes>
+            <Route
+              path="/saved-news"
+              element={
+                <ProtectedRoute isLogedIn={isLogedIn}>
                   <UserSavedCardsContext.Provider value={userCard}>
                     <Header
                       isLogedIn={isLogedIn}
@@ -202,56 +196,56 @@ function App() {
                     />
                     <Footer />
                   </UserSavedCardsContext.Provider>
-                </CurrentUserContext.Provider>
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/"
-            element={
-              <CurrentUserContext.Provider value={currentUser}>
-                <Header
-                  isLogedIn={isLogedIn}
-                  darMode={false}
-                  onCloseClick={handleLoginOpen}
-                  onLogOut={handleLogOut}
-                />
-                {
-                  <PopupWithForm
-                    isOpen={registretionSuccsess}
-                    onCloseClick={closeAllPopUps}
-                    title="Registration successfully completed!"
-                    onChangeClick={handleLoginOpen}
-                    link_rederect_text="Sign In"
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header
+                    isLogedIn={isLogedIn}
+                    darMode={false}
+                    onCloseClick={handleLoginOpen}
+                    onLogOut={handleLogOut}
                   />
-                }
-                <PopUpRegister
-                  isOpen={registerPopUpOpen}
-                  onCloseClick={closeAllPopUps}
-                  onChangeClick={handlePopUpRegisterOrSignUp}
-                  handleRegisterSuccess={handlSuccsessRegistration}
-                  handleRegistration={handleRegistration}
-                  errorMessage={registerErrorMsg}
-                />
-                <PopUpLogin
-                  isOpen={loginPopUpOpen}
-                  onCloseClick={closeAllPopUps}
-                  onChangeClick={handlePopUpRegisterOrSignUp}
-                  handleLogin={handleLogin}
-                />
-                <Main
-                  isLogedIn={isLogedIn}
-                  nesListComponentStatus={newsCardListStatus}
-                  handleSearch={handleSearchResults}
-                  newsCards={newsCards}
-                  handleCardSave={handleCardSave}
-                  handleCardDelete={handleCardDelete}
-                />
-                <Footer />
-              </CurrentUserContext.Provider>
-            }
-          />
-        </Routes>
+                  {
+                    <PopupWithForm
+                      isOpen={registretionSuccsess}
+                      onCloseClick={closeAllPopUps}
+                      title="Registration successfully completed!"
+                      onChangeClick={handleLoginOpen}
+                      link_rederect_text="Sign In"
+                    />
+                  }
+                  <PopUpRegister
+                    isOpen={registerPopUpOpen}
+                    onCloseClick={closeAllPopUps}
+                    onChangeClick={handlePopUpRegisterOrSignUp}
+                    handleRegisterSuccess={handlSuccsessRegistration}
+                    handleRegistration={handleRegistration}
+                    errorMessage={registerErrorMsg}
+                  />
+                  <PopUpLogin
+                    isOpen={loginPopUpOpen}
+                    onCloseClick={closeAllPopUps}
+                    onChangeClick={handlePopUpRegisterOrSignUp}
+                    handleLogin={handleLogin}
+                  />
+                  <Main
+                    isLogedIn={isLogedIn}
+                    nesListComponentStatus={newsCardListStatus}
+                    handleSearch={handleSearchResults}
+                    newsCards={newsCards}
+                    handleCardSave={handleCardSave}
+                    handleCardDelete={handleCardDelete}
+                  />
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        </CurrentUserContext.Provider>
       </div>
     </div>
   );
