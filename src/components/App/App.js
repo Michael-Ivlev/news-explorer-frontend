@@ -12,6 +12,7 @@ import newsApi from "../../utils/NewsApi";
 import mainApi from "../../utils/MainApi";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { UserSavedCardsContext } from "../../contexts/UserSavedCardsContext";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 function App() {
   const [isLogedIn, setIsLogedIn] = useState(false);
@@ -28,10 +29,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const searchKeyWord = localStorage.getItem("searchKeyWord");
 
-  function ProtectedRoute({ children, isLogedIn }) {
-    return !isLogedIn ? <Navigate replace to="/" /> : children;
-  }
-
   React.useEffect(() => {
     if (!localStorage.getItem("searchResults")) {
       return;
@@ -45,26 +42,26 @@ function App() {
     if (!localStorage.getItem("jwt")) {
       return;
     }
-    mainApi.getUserInfo(token).then((res) => {
-      setIsLogedIn(true);
-      setCurrentUser(res);
-    });
-  }, []);
-
-  React.useEffect(() => {
-    if (token) {
-      mainApi.getUserInfo(token).then((res) => setCurrentUser(res));
-    }
+    mainApi
+      .getUserInfo(token)
+      .then((res) => {
+        setIsLogedIn(true);
+        setCurrentUser(res);
+      })
+      .catch((err) => console.log(err));
   }, [token]);
 
   React.useEffect(() => {
     if (isLogedIn === false) {
       return;
     }
-    mainApi.getUserArticlesList(token).then((res) => {
-      localStorage.setItem("userCards", JSON.stringify(res));
-      setUserCard(res);
-    });
+    mainApi
+      .getUserArticlesList(token)
+      .then((res) => {
+        localStorage.setItem("userCards", JSON.stringify(res));
+        setUserCard(res);
+      })
+      .catch((err) => console.log(err));
   }, [isLogedIn]);
 
   function closeAllPopUps() {
@@ -129,12 +126,15 @@ function App() {
   }
 
   function handleLogin(data) {
-    mainApi.signin(data.email, data.password).then((res) => {
-      setToken(res.token);
-      localStorage.setItem("jwt", res.token);
-      setIsLogedIn(true);
-      closeAllPopUps();
-    });
+    mainApi
+      .signin(data.email, data.password)
+      .then((res) => {
+        setToken(res.token);
+        localStorage.setItem("jwt", res.token);
+        setIsLogedIn(true);
+        closeAllPopUps();
+      })
+      .catch((err) => console.log(err));
   }
 
   function handleLogOut() {
@@ -153,12 +153,18 @@ function App() {
       link: card.url,
       image: card.urlToImage,
     };
-    mainApi.saveCard(token, formatCard).then(() => {
-      mainApi.getUserArticlesList(token).then((res) => {
-        localStorage.setItem("userCards", JSON.stringify(res));
-        setUserCard(res);
-      });
-    });
+    mainApi
+      .saveCard(token, formatCard)
+      .then(() => {
+        mainApi
+          .getUserArticlesList(token)
+          .then((res) => {
+            localStorage.setItem("userCards", JSON.stringify(res));
+            setUserCard(res);
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
   }
 
   function handleCardDelete(card) {
@@ -166,12 +172,18 @@ function App() {
       (userCard) => userCard.link === card.url
     );
     const cardId = cardFilter[0]._id;
-    mainApi.deleteCard(token, cardId).then((res) => {
-      mainApi.getUserArticlesList(token).then((res) => {
-        localStorage.setItem("userCards", JSON.stringify(res));
-        setUserCard(res);
-      });
-    });
+    mainApi
+      .deleteCard(token, cardId)
+      .then((res) => {
+        mainApi
+          .getUserArticlesList(token)
+          .then((res) => {
+            localStorage.setItem("userCards", JSON.stringify(res));
+            setUserCard(res);
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
