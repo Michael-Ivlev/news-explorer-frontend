@@ -25,7 +25,6 @@ export function MobileNav(props) {
     : "mobilenav__hamburger invert-colors";
 
   return (
-    <>
       <div className="mobilenav__visabiliti">
         <div className="mobilenav">
           <h2
@@ -50,12 +49,11 @@ export function MobileNav(props) {
           <div className="mobilenav__drop-down">
             <div className="mobilenav__drop-down_container">
               <nav className="mobilenav__drop-down_container_elements">
-                <NavLinks mobile={true} isLogedIn={props.isLogedIn} onCloseClick={props.onCloseClick}/>
+                <NavLinks mobile={true} isLogedIn={props.isLogedIn} onCloseClick={props.onCloseClick} onLogOut={props.onLogOut}/>
               </nav>
             </div>
           </div>
         ) : null}
       </div>
-    </>
   );
 }

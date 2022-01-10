@@ -5,28 +5,35 @@ import "./SavedNews.css";
 import { defaultCards } from "../../NewsCardInitial";
 
 export function SavedNews(props) {
-  function handleCardButtonClick(card) {}
-
   return (
     <>
       <section className="saved-news-header-section">
         <SavedNewsHeader />
       </section>
       <section className="saved-news-cards-section">
-        {defaultCards.map((card) => {
+        {props.userCards ? props.userCards.map((card) => {
+          const formatUserCards = {
+            keyword: card.keyword,
+            title: card.title,
+            publishedAt: card.date,
+            description : card.text,
+            source: { name: card.source },
+            url: card.link,
+            urlToImage: card.image,
+          };
           return (
             <NewCard
-              handleCardButtonClick={handleCardButtonClick}
               isLogedIn={props.isLogedIn}
               buttonInfoText="Sign in to save articles"
-              card={card}
-              isLogIn={true}
+              card={formatUserCards}
+              isLogedIn={props.isLogedIn}
               isDelete={true}
               keyWord={card.keyword}
-              key={card.id}
+              key={Math.random().toString(36).substr(2, 9)}
+              handleCardDelete={props.handleCardDelete}
             />
           );
-        })}
+        }) : null}
       </section>
     </>
   );

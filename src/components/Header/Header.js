@@ -5,5 +5,5 @@ import "./Header.css";
 import { FiLogOut } from "react-icons/fi";
 
 export function Header(props) {
-  return <Navigation isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick}/>;
+  return <Navigation isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick} onLogOut={props.onLogOut}/>;
 }

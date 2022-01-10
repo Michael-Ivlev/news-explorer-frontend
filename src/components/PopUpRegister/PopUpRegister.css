@@ -44,12 +44,12 @@
   cursor: pointer;
 }
 
-.popupwithform__button:disabled{
-    background: #E6E8EB;
+.popupwithform__button:disabled {
+  background: #e6e8eb;
 }
 
 .popupregistter__input-error {
-    margin: 0;
+  margin: 0;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -72,4 +72,14 @@
 
 .popupwithform__link_rederect {
   color: #2f71e5;
+}
+
+.popupregistter__server-error {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ff0000;
 }

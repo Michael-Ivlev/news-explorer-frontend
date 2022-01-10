@@ -18,10 +18,19 @@ export function PopUpRegister(props) {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
-    props.handleRegisterSuccess();
-    setIsOpen(false);
-  };
+  function onSubmit(data) {
+    // const registerData = {
+    //   email: data.email,
+    //   password: data.password,
+    //   username: data.username,
+    // };
+    props.handleRegistration(data);
+  }
+
+  // const onSubmit = (data) => {
+  //   props.handleRegisterSuccess();
+  //   setIsOpen(false);
+  // };
 
   return (
     <PopupWithForm
@@ -79,13 +88,13 @@ export function PopUpRegister(props) {
         <p className="popupregistter__input-error">
           {errors.username?.message}
         </p>
-
+        <p className="popupregistter__server-error">{props.errorMessage}</p>
         <button
           className="popupwithform__button"
           type="submit"
           disabled={!formState.isValid}
         >
-          Sign In
+          Sign Up
         </button>
       </form>
     </PopupWithForm>

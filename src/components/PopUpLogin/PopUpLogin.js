@@ -15,11 +15,8 @@ export function PopUpLogin(props) {
   const email = watch("email");
   const password = watch("password");
 
-  function handleSuccessLogin(event) {
-    event.preventDefault();
-    if ((email === "admin@test.com") & (password === "test1234")) {
-      props.handleLoginSuccess();
-    }
+  function onSubmit(data) {
+    props.handleLogin(data)
   }
 
   return (
@@ -31,7 +28,7 @@ export function PopUpLogin(props) {
       link_text={"Or "}
       link_rederect_text="Sign Up"
     >
-      <form onSubmit={handleSuccessLogin}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <p className="popuplogin__label">Email</p>
         <input
           className="popuplogin__input"
