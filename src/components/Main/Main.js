@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { About } from "../About/About";
 import { NewCard } from "../NewCard/NewCard";
 import { NewsCardList } from "../NewsCardList/NewsCardList";
 import { PopUpRegister } from "../PopUpRegister/PopUpRegister";
 import { PopupWithForm } from "../PopupWithForm/PopupWithForm";
 import { SearchForm } from "../SearchForm/SearchForm";
+import newsApi from "../../utils/NewsApi";
 import "./Main.css";
 
 export function Main(props) {
-  const [newsListStatus, setNewsListStatus] = useState("")
-  function handleSearchClick(event){
+  const [newsListStatus, setNewsListStatus] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  function handleSearchClick(event) {
     event.preventDefault();
-    setNewsListStatus("Finish")
+    props.handleSearch(event)
   }
   return (
     <>
@@ -22,11 +25,17 @@ export function Main(props) {
             Find the latest news on any topic and save them in your personal
             account.
           </h2>
-          <SearchForm handleButtonClick={handleSearchClick}/>
+          <SearchForm handleButtonClick={handleSearchClick} />
         </div>
       </section>
       <section className="newslist-section">
-        <NewsCardList searchResultStatus={newsListStatus} isLogedIn={props.isLogedIn}/>
+        <NewsCardList
+          searchResultStatus={props.nesListComponentStatus}
+          isLogedIn={props.isLogedIn}
+          newsCards={props.newsCards}
+          handleCardSave={props.handleCardSave}
+          handleCardDelete={props.handleCardDelete}
+        />
       </section>
       <section className="about-section">
         <About />

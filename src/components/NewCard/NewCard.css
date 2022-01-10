@@ -47,6 +47,7 @@
   color: #1a1b22;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-height: 90px;
 }
 
 .newcard__info_location {

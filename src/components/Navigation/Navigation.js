@@ -8,8 +8,8 @@ import { MobileNav } from "./MobileNav";
 export function Navigation(props) {
   return (
     <>
-      <DesktopNav isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick}/>
-      <MobileNav isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick}/>
+      <DesktopNav isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick} onLogOut={props.onLogOut}/>
+      <MobileNav isLogedIn={props.isLogedIn} darMode={props.darMode} onCloseClick={props.onCloseClick} onLogOut={props.onLogOut}/>
     </>
   );
 }

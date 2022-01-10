@@ -51,9 +51,9 @@
   font-size: 18px;
   line-height: 24px;
   padding: 10px 19px;
-  /* main/white */
   background: none;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .navlink__button_login {
