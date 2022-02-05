@@ -7,7 +7,6 @@ News-explorer-frontend is my final project, this website was built from 0 this p
 ### technologies and techniques used.
 
 * React
-* NodeJs
 * HTML/CSS
 * Figma
 
