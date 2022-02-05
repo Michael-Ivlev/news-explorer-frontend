@@ -1,4 +1,4 @@
-# Note For The Reviewr :)
+Project that ive leaned how to build front end authurization 
 
 login account:
 email: admin@test.com
